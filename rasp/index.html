@@ -119,113 +119,7 @@ html{scroll-behavior:smooth}.centr{text-align:center}a{color:#1fd727}.terminal__
 
   <div class="col">
 
-  <script>
-
-
-
-
-
-
-
-
-
-
-
-if (window.innerWidth > 1024) {
-
-
-
-	 document.getElementById("mobidesc").innerHTML = '<!-- Yandex.RTB R-A-333772-1 --><div id="yandex_rtb_R-A-333772-1"></div>'; 
-
-
-
-	 (function(w, d, n, s, t) {
-
-        w[n] = w[n] || [];
-
-        w[n].push(function() {
-
-            Ya.Context.AdvManager.render({
-
-                blockId: "R-A-333772-1",
-
-                renderTo: "yandex_rtb_R-A-333772-1",
-
-                async: true
-
-            });
-
-        });
-
-        t = d.getElementsByTagName("script")[0];
-
-        s = d.createElement("script");
-
-        s.type = "text/javascript";
-
-        s.src = "//an.yandex.ru/system/context.js";
-
-        s.async = true;
-
-        t.parentNode.insertBefore(s, t);
-
-    })(this, this.document, "yandexContextAsyncCallbacks");
-
-
-
-} else {
-
-
-
-	 document.getElementById("mobidesc").innerHTML = '<!-- Yandex.RTB R-A-333772-2 --><div id="yandex_rtb_R-A-333772-2"></div>'; 
-
- (function(w, d, n, s, t) {
-
-        w[n] = w[n] || [];
-
-        w[n].push(function() {
-
-            Ya.Context.AdvManager.render({
-
-                blockId: "R-A-333772-2",
-
-                renderTo: "yandex_rtb_R-A-333772-2",
-
-                async: true
-
-            });
-
-        });
-
-        t = d.getElementsByTagName("script")[0];
-
-        s = d.createElement("script");
-
-        s.type = "text/javascript";
-
-        s.src = "//an.yandex.ru/system/context.js";
-
-        s.async = true;
-
-        t.parentNode.insertBefore(s, t);
-
-    })(this, this.document, "yandexContextAsyncCallbacks");
-
-
-
-}
-
-
-
-	
-
-
-
-
-
-
-
-</script>
+ 
 
 </div></div>
 
@@ -235,7 +129,7 @@ if (window.innerWidth > 1024) {
 
     <p id="dmg"></p>
 
-	<div class="typewriter">
+	<div>
 
 
 
@@ -245,35 +139,7 @@ if (window.innerWidth > 1024) {
 
   <div class="col-sm-8">
 
- <div class="terminal">
-
-
-
-				<p class="terminal__line">Здравствуйте.</p>
-
-				<p class="terminal__line"></p>
-
-				<p class="terminal__line">Выберите, на какой день</p>
-
-				<p class="terminal__line">хотите узнать расписание.</p>
-
-				<p class="terminal__line"><strong>Список (жмите):</strong></p>
-
-				<p class="terminal__line"><a href="#n1">— Понедельник</a></p>
-
-				<p class="terminal__line"><a href="#n2">— Вторник</a></p>
-
-				<p class="terminal__line"><a href="#n3">— Среда</a></p>
-
-				<p class="terminal__line"><a href="#n4">— Четверг</a></p>
-
-				<p class="terminal__line"><a href="#n5"> — Пятница</a></p>
-
-				<p class="terminal__line">Cегодня <em><span id="dni"></span></em>.</p>
-
-			
-
-  </div> <!-- // Terminal -->
+ 
 
   </div>
 
@@ -287,7 +153,6 @@ if (window.innerWidth > 1024) {
 
   <div class="bd-callout bd-callout-warning">
 
-<h5 id="conveying-meaning-to-assistive-technologies">Не перегружайте школьный рюкзак лишними учебниками - это плохо скажется на позвоночнике.</h5>
 
 </div>
 
@@ -301,7 +166,7 @@ if (window.innerWidth > 1024) {
 
   <div class="col">
 
-  <div class="typewriter">
+
 
 
 
@@ -382,7 +247,7 @@ if (window.innerWidth > 1024) {
 </table>
 
 </div>
-<div class="shadow p-3 mb-5 bg-white rounded"><h5><a href="http://www.rustorg.biz/" target="_blank">Сайт бесплатных объявлений №1</a></h5></div>
+
 <h1 id="n2" class="display-5">Вторник</h1>
 
 <div class="table-responsive"> 
@@ -794,17 +659,7 @@ if (window.innerWidth > 1024) {
 
 
 
-<div id="au"><audio src="v.wav" preload="auto" autoplay> Ваш браузер не поддерживает <code>audio</code> элемент.</audio></div>
-<audio src="v.wav" preload="auto" autoplay="">
-  Ваш браузер не поддерживает <code>audio</code> элемент. 
-</audio>
-<script>
-setTimeout(function() { au.innerHTML = '<audio src="v.wav" preload="auto" autoplay> Ваш браузер не поддерживает <code>audio</code> элемент.</audio>'}, 10000);
-</script>
-</div>
-<script>
-function scrollToElement(e){"string"==typeof e&&(e=document.getElementById(e));for(var t=0,n=0;null!=e;)t+=e.offsetLeft,n+=e.offsetTop,e=e.offsetParent;window.scrollTo(t,n)}var ned=["Воскресенье","Понедельник","Вторник","Среда","Четверг","Пятница","Суббота"],mes=["января","февраля","марта","апреля","мая","июня","июля","августа","сентября","октября","ноября","декабря"],date=new Date,p=date.getDay(),pp=date.getMonth(),dmg=document.getElementById("dmg");dmg.innerHTML="<em>Сегодня "+ned[p]+", "+date.getDate()+" "+mes[pp]+" "+date.getFullYear()+"г.</em>";var no="n"+p;date.getDay()>0&&date.getDay()<6&&setTimeout(function(){scrollToElement(no)},2e4),setInterval(function(){for(var e=document.getElementById("dni"),t=0;t<ned.length;t++)date.getDay()==t&&(e.innerHTML=t>0&&t<6?'<a href="#n'+date.getDay()+'">'+ned[t]+"</a>":'<code>'+ned[t]+'</code>')},1e4);
-</script>
+
 
   
 
