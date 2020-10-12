@@ -4,8 +4,8 @@
     <description>
         Расписание уроков.
     </description>
-    <author email="doctype.html@ya.ru" href="http://ортография.рф">
-        Ортография.рф
+    <author email="doctype.html@ya.ru" href="http://melkosoftcom.github.io">
+        Мелкософт
     </author>
     <content src="index.html" />
     <access origin="*" />
