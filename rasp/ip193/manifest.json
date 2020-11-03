@@ -20,6 +20,8 @@
         }],
     "start_url": "/rasp/ip193/index.html",
     "display": "standalone",
+    "scope": "/",
     "background_color": "#ffffff",
-    "theme_color": "#ffffff"
+    "theme_color": "#2979ff",
+    "splash_pages": null
   }
