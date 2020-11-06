@@ -3,9 +3,9 @@
   "short_name": "ИП193",
   "icons": [
       {
-          "src": "https://melkosoftcom.github.io/rasp/assets/favicon-32x32.ico",
+          "src": "https://melkosoftcom.github.io/rasp/assets/favicon-128x128.png",
           "sizes": "128x128",
-          "type": "image/ico"
+          "type": "image/png"
       },
       {
           "src": "https://melkosoftcom.github.io/rasp/assets/favicon.ico",
