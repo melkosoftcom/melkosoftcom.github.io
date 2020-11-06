@@ -42,7 +42,7 @@
   "start_url": "/rasp/ip193/index.html",
   "display": "standalone",
   "scope": "/rasp/ip193/",
-  "background_color": "#000000",
+  "background_color": "transparent",
   "theme_color": "#2979ff",
   "splash_pages": null,
   "url": "https://melkosoftcom.github.io/rasp/ip193/",
