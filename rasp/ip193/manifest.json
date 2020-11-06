@@ -8,19 +8,29 @@
           "type": "image/png"
       },
       {
-          "src": "https://melkosoftcom.github.io/rasp/assets/favicon.ico",
+          "src": "assets/favicon-152x152.png",
           "sizes": "152x152",
-          "type": "image/ico"
+          "type": "image/png"
       },
       {
-          "src": "https://melkosoftcom.github.io/rasp/assets/favicon.ico",
+          "src": "assets/favicon-144x144.png",
           "sizes": "144x144",
-          "type": "image/ico"
+          "type": "image/png"
       },
       {
-          "src": "https://melkosoftcom.github.io/rasp/assets/favicon.ico",
+          "src": "assets/favicon-192x192.png",
           "sizes": "192x192",
-          "type": "image/ico"
+          "type": "image/png"
+      },
+      {
+        "src": "assets/favicon-32x32.png",
+        "type": "image/png",
+        "sizes": "32x32"
+      },
+      {
+        "src": "assets/favicon-16x16.png",
+        "type": "image/png",
+        "sizes": "16x16"
       }
   ],
   "start_url": "/rasp/ip193/index.html",
