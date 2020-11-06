@@ -31,6 +31,12 @@
         "src": "assets/favicon-16x16.png",
         "type": "image/png",
         "sizes": "16x16"
+      },
+      {
+        "src": "assets/maskable_icon.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "any maskable"
       }
   ],
   "start_url": "/rasp/ip193/index.html",
