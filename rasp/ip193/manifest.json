@@ -41,7 +41,7 @@
   ],
   "start_url": "/rasp/ip193/index.html",
   "display": "standalone",
-  "scope": "/",
+  "scope": "/rasp/ip193/",
   "background_color": "#000000",
   "theme_color": "#2979ff",
   "splash_pages": null,
