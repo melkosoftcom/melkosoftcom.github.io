@@ -1,10 +1,140 @@
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+ 
+.wrapper {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+ 
+.blocks {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: row wrap;
+}
+ 
+.block {
+  width: 50%;
+  height: 50%;
+}
+ 
+.block:nth-of-type(1) {
+  background-color: #763626;
+}
+ 
+.block:nth-of-type(2) {
+  background-color: #336B87;
+}
+ 
+.block:nth-of-type(3) {
+  background-color: #90AFC5;
+}
+ 
+.block:nth-of-type(4) {
+  background-color:#2A3132;
+}
+ 
+.logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  background-color: black;
+}
+  
+textarea {
+  width:100%;
+  height: 100%;
+  padding: 10px;
+  border: none;
+  box-sizing: border-box;
+  border-radius: 2px;
+  font: 16px 'Segoe UI', Arial, Helvetica, sans-serif;
+  background: #222222;
+  color: #ffffff;
+  overflow: auto;
+}
+
+textarea:focus {
+  box-shadow: 0 0 0 2px #2e8b57;
+  outline: none;
+}
+
+textarea::placeholder {
+  color: #2e8b57;
+/*  color: #ffffff; */
+}
+.first{
+  width:90%;
+  height: 80%;
+  padding: 10px;
+  border: none;
+  box-sizing: border-box;
+  border-radius: 2px;
+  font: 16px 'Segoe UI', Arial, Helvetica, sans-serif;
+  background:  #763626;
+  color: #ffffff;
+  overflow: auto;
+}
+.double{
+  width:100%;
+  height: 100%;
+  padding: 10px;
+  border: none;
+  box-sizing: border-box;
+  border-radius: 2px;
+  font: 16px 'Segoe UI', Arial, Helvetica, sans-serif;
+  background:  #336B87;
+  color: #ffffff;
+  overflow: auto;
+}
+.triple{
+  width:100%;
+  height: 100%;
+  padding: 10px;
+  border: none;
+  box-sizing: border-box;
+  border-radius: 2px;
+  font: 16px 'Segoe UI', Arial, Helvetica, sans-serif;
+  background:  #90AFC5;
+  color: #ffffff;
+  overflow: auto;
+}
+.four{
+  width:100%;
+  height: 100%;
+  padding: 10px;
+  border: none;
+  box-sizing: border-box;
+  border-radius: 2px;
+  font: 16px 'Segoe UI', Arial, Helvetica, sans-serif;
+  background:  #2A3132;
+  color: #ffffff;
+  overflow: auto;
+}
+</style>
+
 <div class="wrapper">
-    <div class="logo"></div>
+    
     <div class="blocks">
-      <div class="block"></div>
-      <div class="block"></div>
-      <div class="block"></div>
-      <div class="block"></div>
+      <div class="block"><form id="first">	
+
+        <textarea name="first"></textarea><br />	
+        
+        <input type="submit" onclick="saveFormSession(this.form)" value="Save form" />&nbsp;	
+        <input type="button" onclick="restoreFormSession(this.form)" value="Restore form" />	
+        </form>	</div>
+      <div class="block"><textarea class="double" cols="40" rows="3"></textarea></div>
+      <div class="block"><textarea class="triple" cols="40" rows="3"></textarea></div>
+      <div class="block"><textarea class="four" cols="40" rows="3"></textarea></div>
     </div>
   </div>
   

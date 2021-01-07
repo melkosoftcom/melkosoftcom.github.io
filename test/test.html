@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">	
+<html>	
+<head>	
+    <title>Form Session</title>	
+</head>	
+<body>	
+<script type="text/javascript">	
+<!--	
+/**	
+* Сохраняем форму. Функция принимает ссылку на форму. Форма должна иметь	
+* уникальный аттрибут ID.	
+*/	
+function saveFormSession(form) {	
+  if(!form||!form.id||!/^[^;=]+$/.test(form.id)) return;	
+  var data="", tok, el, safe_name;	
+  for(var i=0; i<form.elements.length; i++) {	
+    if((el=form.elements[i]).name==""||el.getAttribute("skip_form_save")!=null) continue;	
+    safe_name=el.name.replace(/([)\\])/g, "\\$1");	
+    switch(el.type) {	
+      case "text":	
+      case "textarea": tok="v("+safe_name+"):"+el.value.replace(/([|\\])/g, "\\$1")+"||"; break;	
+      case "radio":	
+      case "checkbox": tok="s("+safe_name+"):"+(el.checked? "1": "0")+"||"; break;	
+      case "select-one": tok="i("+safe_name+"):"+(el.selectedIndex)+"||"; break;	
+      default: tok="";	
+    }	
+    data+=tok;	
+  }	
+  if(data>=4000) return alert("Can't save form into cookie, to much data...");	
+  document.cookie="ses"+form.id+"="+escape(data);
+ 
+  return true;
+}	
+/**	
+* Восстановить значение формы. Форма должна иметь уникальный атттрибут ID.	
+*/	
+function restoreFormSession(form) {	
+   if(!form||!form.id||!/^[^;=]+$/.test(form.id)) return false;	
+   var strt, end, data, nm, dat;	
+   if((strt=document.cookie.indexOf("ses"+form.id))<0) return false;	
+   if((end=document.cookie.indexOf(";", strt + form.id.length + 3))<0) end=document.cookie.length;	
+   data=unescape(document.cookie.substring(strt + form.id.length + 4, end)).split("||");	
+   for(var i=0; i<data.length-1; i++) {	
+      nm=/^[vsi]\(((?:[^)\\]|(?:\\\))|(?:\\\\))+)\)\:/.exec(data[i]);	
+      nm[1]=nm[1].replace(/\\([)\\])/g, "$1");	
+      dat=data[i].substr(nm[0].length).replace(/\\([|\\])/g, "$1");	
+      switch(data[i].charAt(0)) {	
+        case "v": form.elements[nm[1]].value=dat; break;	
+        case "s": form.elements[nm[1]].checked=(dat=="1"? true: false); break;	
+        case "i": form.elements[nm[1]].selectedIndex=dat; break;	
+      }	
+   }
+ 
+   return true;
+}	
+//-->	
+</script>	
+<!-- Пример использования -->	
+<form id="test1">	
+
+<textarea name="txt"></textarea><br />	
+
+<input type="submit" onclick="saveFormSession(this.form)" value="Save form" />&nbsp;	
+<input type="button" onclick="restoreFormSession(this.form)" value="Restore form" />	
+</form>	
+</body>	
+</html>
